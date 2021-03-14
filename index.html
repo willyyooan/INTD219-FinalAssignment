@@ -7,26 +7,125 @@
 
 <html>
 <body style="background-color: #ada9ee">
+
+    <div class="monaSplash"> 
+        <img src="https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Character_Mona_Portrait.png/revision/latest/scale-to-width-down/1000?cb=20210128000315" height="1000px">
+    </div>
+
     <div class="container-fluid-1 bg-1 text-center">
-        <h3>A Guide on how to Build</h3>
-        <h1 class="monaName">MONA</h1>
+        <h3 class="font300">A Guide on how to Build</h3>
+        <h1 class="monaName font100">MONA</h1>
     </div>
-    <div class="container-fluid-2 text-center">
-        <h3>So you tried to roll for Venti but instead got Mona. What do you do?</h3>
+
+
+
+    <div class="container-fluid-2 text-center" style="color:white">
+        <h3 class="font300">So you tried to roll for Venti but instead got Mona. What do you do?</h3>
     </div>
-    <div class="container-fluid-2 text-center">
+    <div class="container-fluid-2 text-center" style="color:white">
         <h5>Build her, of course!</h5>
     </div>
-    <div class="container-fluid-2 text-center">
+
+    <div class="buttonGrp">
+        <button class="button button1" onclick="moveSet()">Move Set</button>
+        <button class="button button2" onclick="ascensions()">Ascension Materials</button>
+        <button class="button button3" onclick="artifacts()">Artifacts</button>
+    </div>
+
+    <div class="container-fluid-1 text-center">
         <iframe width="1280" height="720" src="https://www.youtube.com/embed/9dMRIV8dijI"></iframe>
+        <p>Offical Mona Showcase by Mihoyo</p>
+    </div>
+
+    <div class="text-center bg-2">
+        <div class="moveSet">
+            <h1 class="font100" id="moveSetTitle">Move Set</h1>
+            <h4 class="font300" style="color: rgb(255, 255, 255)">As you may already guessed, Mona is a Hydro Catalyst user</h4>
+        </div>
     </div>
     
+    <div class="container font300">
+
+        <div class="row">
+          <div class="col-md d-flex justify-content-center">
+            <img src="https://static.wikia.nocookie.net/gensin-impact/images/d/de/Talent_Ripple_of_Fate.png/revision/latest/scale-to-width-down/128?cb=20201209174326" height="128">
+          </div>
+          <div class="col-md ">
+            <h2 class="d-flex justify-content-center"> Normal Attack: Ripple of Fate </h2>
+            <h6><b>Normal Attack:</b> Perform up to 4 water splash attacks that deal <b><span style="color: #001aff">Hydro DMG</span></b>.</h6>
+            <h6><b>Charged Attack:</b> Consumes a bit of stamina and deals <b><span style="color: #001aff"> AOE Hydro DMG</span></b> after a short casting period.</h6>
+            <h6><b>Plunging Attack:</b> Gathering the might of Hydro, Mona plunges towards the ground from mid-air, damaging all opponents in her path. Deals <b><span style="color: #001aff"> AOE Hydro DMG</span></b> upon impact with the ground.</h6>
+          </div>
+        </div>
+
+        <div class="text-center">
+            <iframe class="imgur-embed" width="600" height="350" frameborder="1" src="https://i.imgur.com/zdHVO7Q.gifv#embed"></iframe>
+        </div>
+
+        <div class="row">
+            <div class="col-md d-flex justify-content-center">
+              <img src="https://static.wikia.nocookie.net/gensin-impact/images/4/45/Talent_Mirror_Reflection_of_Doom.png/revision/latest/scale-to-width-down/128?cb=20201209174049" height="128">
+            </div>
+            <div class="col-md ">
+              <h2 class="d-flex justify-content-center"> Elemental Skill: Mirror Reflection of Doom </h2>
+              <h6>Creates an illusory Phantom of fate from coalesced waterspouts.</h6>
+              <h6>The <b>Phantom</b> has the following special properties:</h6>
+              <h6><li>Continuously taunts nearby opponents, attracting their fire.</li></h6>
+              <h6><li>Each second, 4 times, deals <b><span style="color: #001aff"> AOE Hydro DMG</span></b>.</li></h6>
+              <h6><li>When its duration expires, the Phantom explodes, dealing <b><span style="color: #001aff"> AOE Hydro DMG</span></b>.</li></h6>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <iframe class="imgur-embed" width="600" height="350" frameborder="0" src="https://i.imgur.com/o1ZEni2.gifv#embed"></iframe>
+        </div>
+
+        <div class="row">
+            <div class="col-md d-flex justify-content-center">
+              <img src="https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Talent_Stellaris_Phantasm.png/revision/latest?cb=20201209175000" height="128">
+            </div>
+            <div class="col-md ">
+              <h2 class="d-flex justify-content-center"> Elemental Burst: Stellaris Phantasm </h2>
+              <h6>Mona summons the sparkling waves and creates a reflection of the starry sky, applying the Illusory Bubble status to the opponents in a large AoE.</h6>
+              <h6><b>Illusionary Bubble:</b> Traps opponents inside a pocket of destiny and also makes them <span style="color: #001aff"><b>wet</b></span>. Renders weaker opponents immobile. When an opponent affected by Illusory Bubble sustains DMG, it has the following effects:</h6>
+              <h6><li>Applies an Omen to the opponent, which gives a DMG Bonus, also increasing the DMG of the attack that causes it.</li></h6>
+              <h6><li>Removes the Illusory Bubble, dealing <b><span style="color: #001aff"> Hydro DMG</span></b>in the process.</li></h6>
+              <h6><b>Omen:</b> During its duration, increases DMG taken by opponents.</h6>
+            </div>
+        </div>
+      </div>
+
 </body>
 </html>
 
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+html
+{
+    scroll-behavior: smooth
+}
+
+.font100
+{
+    font-family: "Roboto", sans-serif;
+}
+
+.font300
+{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+
+.monaSplash
+{
+    top: 25%;
+    position: absolute;
+    opacity: 50%;
+    z-index:-1;
+}
 
 .monaName
 {
@@ -36,7 +135,7 @@
 .container-fluid-1
 {
     padding-top: 70px;
-    padding-bottom: 200px;
+    padding-bottom: 150px;
     font-family: "Roboto", sans-serif;
 }
 
@@ -49,16 +148,85 @@
     font-weight: 100;
 }
 
-.container-fluid-3
-{
-    position: absolute;
-}
-
 .bg-1
 {
     background-image: linear-gradient(to top, rgba(104, 94, 233, 0), 15%, #685ee9);
     color: #ffffff;
 }
+
+.bg-2
+{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: #685ee9;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.button1 {
+  background-color: #3f5597; 
+  color: rgb(255, 255, 255); 
+  border: 2px solid #213263;
+}
+
+.button1:hover {
+  background-color: #213263;
+  color: white;
+}
+
+.button2 {
+  background-color: #497cbe; 
+  color: rgb(255, 255, 255); 
+  border: 2px solid #345683;
+}
+
+.button2:hover {
+  background-color: #345683;
+  color: white;
+}
+
+.button3 {
+  background-color: #8a46b8; 
+  color: rgb(255, 255, 255); 
+  border: 2px solid #633483;
+}
+
+.button3:hover {
+  background-color: #633483;
+  color: white;
+}
+
+.buttonGrp
+{
+    text-align: center;
+}
+
+.row
+{
+    padding-top: 75px;
+    padding-bottom: 25px;
+    color: rgb(17, 0, 78)
+}
+
+#moveSetTitle
+{
+    font-size: 75;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+}
+
 
 </style>
 
@@ -66,6 +234,10 @@
 
 <script>
 
+function moveSet() {
+  var elmnt = document.getElementById("moveSetTitle");
+  elmnt.scrollIntoView();
+}    
 
 
 </script>
