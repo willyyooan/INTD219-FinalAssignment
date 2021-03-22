@@ -34,6 +34,7 @@
         <button class="button button1" onclick="moveSet()">Move Set</button>
         <button class="button button2" onclick="ascensions()">Ascension Materials</button>
         <button class="button button3" onclick="artifacts()">Artifacts</button>
+        <button class="button button4" onclick="teamComposition()">Team Composition</button>
     </div>
 
     <div class="container-fluid-1 text-center">
@@ -219,10 +220,16 @@
         </div>
       </div>
     </div>
+    <h2 class="text-center font300" style="padding-bottom: 50px;">Good luck with the Oceanid!</h2>
 
   </div>
 
-
+  <div class="text-center bg-4">
+    <div class="artifacts">
+        <h1 class="font100" id="artifactsTitle">Artifacts</h1>
+        <h4 class="GI_font" style="color: rgb(255, 255, 255)">Recommended Artifacts for Mona</h4>
+    </div>
+  </div>
 
 </body>
 </html>
@@ -323,6 +330,13 @@ body
     background-color: #497cbe;
 }
 
+.bg-4
+{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: #8a46b8;
+}
+
 .button {
   border: none;
   color: white;
@@ -370,6 +384,17 @@ body
   color: white;
 }
 
+.button4 {
+  background-color: #b84655; 
+  color: rgb(255, 255, 255); 
+  border: 2px solid #85323d;
+}
+
+.button4:hover {
+  background-color: #85323d;
+  color: white;
+}
+
 .buttonGrp
 {
     text-align: center;
@@ -403,6 +428,13 @@ body
     color: rgb(255, 255, 255);
 }
 
+#artifactsTitle
+{
+    font-size: 75;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+}
+
 </style>
 
 
@@ -416,6 +448,11 @@ function moveSet() {
 
 function ascensions() {
   var elmnt = document.getElementById("ascensionTitle");
+  elmnt.scrollIntoView();
+} 
+
+function artifacts() {
+  var elmnt = document.getElementById("artifactsTitle");
   elmnt.scrollIntoView();
 } 
 
