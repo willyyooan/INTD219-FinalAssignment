@@ -299,9 +299,67 @@
         <div style="padding-bottom: 50px;"></div>
 
         <h2 class="GI_font">Additonally, aim for a Hydro Damage bonus cup for your 5th artifact</h2>
+        <h3 class="font300">As for substats, aim for ATK, ATK%, Crit%, Crit Rate, or Energy Recharge</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center bg-5">
+    <div class="teamComposition">
+        <h1 class="font100" id="teamTitle">Team Composition</h1>
+        <h4 class="GI_font" style="color: rgb(255, 255, 255)">Who you can pair Mona with</h4>
     </div>
 
-  </div>
+    <h2 class="text-center font300" style="padding-top: 50px; color: white; padding-bottom: 50px">Honestly, any Electro, Cyro, or Pyro unit works well with Mona</h2>
+    <h3 class="text-center font300" style="padding-top: 50px; color: white; padding-bottom: 50px"> Based on personal use and research (I say this becuase I don't have Bennett), these 3 characters have pretty good team synergy</h3>
+
+    <div class="row">
+      <div class="col-3"></div>
+
+      <div class="col-3">
+        <img src="Images/Character_Ganyu_Thumb.png" height="256" style="padding-bottom: 25px;">
+        <h2 class="GI_font">Ganyu</h2>
+      </div>
+
+      <div class="col-3">
+        <h2 class="GI_font">Freeze</h2>
+        <h3 class="font300">All Mona's attacks apply a wet status to the enemy. I use Ganyu's Elemental Skill to quickly freeze them after placing down Mona's Elemental Skill.</h3>
+      </div>
+
+      <div class="col-3"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-3"></div>
+
+      <div class="col-3">
+        <img src="Images/Character_Fischl_Thumb.png" height="256" style="padding-bottom: 25px;">
+        <h2 class="GI_font">Fischl</h2>
+        
+      </div>
+
+      <div class="col-3">
+        <h2 class="GI_font">Electro-Charge</h2>
+        <h3 class="font300">Electro-Charge does damage and stuns enemies. Drop own Oz and switch back to Mona to apply wet to deal electro-charged reactions.</h3>
+      </div>
+
+      <div class="col-3"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-3"></div>
+
+      <div class="col-3">
+        <img src="Images/Character_Bennett_Thumb.png" height="256" style="padding-bottom: 25px;">
+        <h2 class="GI_font">Bennett</h2>
+      </div>
+
+      <div class="col-3">
+        <h2 class="GI_font">Vapourize</h2>
+        <h3 class="font300">Bennett is an S-tier support character. Bennett's Burst allows a damage boost in an AOE and when a combo is done correctly, Mona's burst can do VERY big damage.</h3>
+      </div>
+    </div>
+
 
 </body>
 </html>
@@ -412,6 +470,13 @@ body
     background-color: #8a46b8;
 }
 
+.bg-5
+{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: #b84655;
+}
+
 .button {
   border: none;
   color: white;
@@ -518,6 +583,12 @@ body
     color: rgb(255, 255, 255);
 }
 
+#teamTitle
+{
+    font-size: 75;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+}
 </style>
 
 
@@ -536,6 +607,11 @@ function ascensions() {
 
 function artifacts() {
   var elmnt = document.getElementById("artifactsTitle");
+  elmnt.scrollIntoView();
+} 
+
+function teamComposition() {
+  var elmnt = document.getElementById("teamTitle");
   elmnt.scrollIntoView();
 } 
 
