@@ -4,6 +4,9 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 <!-- JavaScript Bundle with Popper BOOTSTRAP -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<!-- Prettify -->
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
 
 <html>
 <body style="background-color: #ada9ee">
@@ -30,7 +33,7 @@
         <h5 class="GI_font" style="color: white;">Build her, of course!</h5>
     </div>
 
-    <div class="buttonGrp">
+    <div class="buttonGrp sticky">
         <button class="button button1" onclick="moveSet()">Move Set</button>
         <button class="button button2" onclick="ascensions()">Ascension Materials</button>
         <button class="button button3" onclick="artifacts()">Artifacts</button>
@@ -42,9 +45,12 @@
         <p>Offical Mona Showcase by Mihoyo</p>
     </div>
 
+
+
+    <!-- MOVE SET -->
     <div class="text-center bg-2">
         <div class="moveSet">
-            <h1 class="font100" id="moveSetTitle">Move Set</h1>
+            <h1 class="font100" id="moveSetTitle" style="padding-top: 75px;">Move Set</h1>
             <h4 class="GI_font" style="color: rgb(255, 255, 255)">As you may already guessed, Mona is a Hydro Catalyst user</h4>
         </div>
 
@@ -107,9 +113,10 @@
       </div>
   </div>
 
+  <!-- ASCENSION MATS -->
   <div class="text-center bg-3">
     <div class="ascensions">
-        <h1 class="font100" id="ascensionTitle">Ascension Materials</h1>
+        <h1 class="font100" id="ascensionTitle" style="padding-top: 75px;">Ascension Materials</h1>
         <h4 class="GI_font" style="color: rgb(255, 255, 255)">Have fun fighting Whopperflowers and the Oceanid</h4>
     </div>
 
@@ -240,9 +247,11 @@
     </div>
   </div>
 
+
+  <!-- ARTIFACTS -->
   <div class="text-center bg-4">
     <div class="artifacts">
-        <h1 class="font100" id="artifactsTitle">Artifacts</h1>
+        <h1 class="font100" id="artifactsTitle" style="padding-top: 75px;">Artifacts</h1>
         <h4 class="GI_font" style="color: rgb(255, 255, 255)">Recommended Artifacts for Mona</h4>
     </div>
 
@@ -304,9 +313,11 @@
     </div>
   </div>
 
+
+  <!-- TEAM COMP -->
   <div class="text-center bg-5">
     <div class="teamComposition">
-        <h1 class="font100" id="teamTitle">Team Composition</h1>
+        <h1 class="font100" id="teamTitle" style="padding-top: 75px;">Team Composition</h1>
         <h4 class="GI_font" style="color: rgb(255, 255, 255)">Who you can pair Mona with</h4>
     </div>
 
@@ -359,8 +370,74 @@
         <h3 class="font300">Bennett is an S-tier support character. Bennett's Burst allows a damage boost in an AOE and when a combo is done correctly, Mona's burst can do VERY big damage.</h3>
       </div>
     </div>
+  </div>
 
 
+  <div class="text-center bg-6">
+    <div class="codeSnippet">
+        <h1 class="font100" id="rollTitle">Damage Calculator</h1>
+        <h4 class="GI_font" style="color: rgb(255, 255, 255)">You've built Mona, and want to know how much damage she can do?</h4>
+        <div style="padding-bottom: 50px;"></div>
+        <h4 class="GI_font" style="color: rgb(255, 255, 255)">Here's a code example for a very simple Damage Calculator!</h4>
+        <div style="padding-bottom: 25px;"></div>
+    </div>
+
+    <!-- CODE -->
+    <div class="code container">
+      <pre class="prettyprint lang-py linenums">
+        #SCENARIO: YOU ARE FIGHTING A LEVEL 87 HILICHURL
+        #WITH MY FULLY BUILT LEVEL 90 C0 MONA WITH
+        #A LEVEL 90 EYE OF PERCEPTION
+
+        #MONA ATTACK
+        charATK = 287
+        weaponATK = 454
+        weaponBonus = 1 + (55.1/100)
+        baseATK = charATK + weaponATK
+
+        #ARTIFACTS
+        artiATK = 1706
+        attack = baseATK + artiATK
+
+        #BONUSES
+        abilityPercent = 60.2/100 #first auto attack
+        bonusDMG = 88/100
+
+        #ENEMY HILICHURL DEFENSE
+        monaLVL = 90
+        hiliLVL = 87
+        hiliRES = 1 - 0.1
+
+        mulDEF = (monaLVL + 100) / (monaLVL + hiliLVL + 200)
+
+        outDMG = attack * abilityPercent * (1 + bonusDMG)
+        inDMG = outDMG * mulDEF * hiliRES
+        crit = inDMG * (1 + 99.7/100)
+
+        #APPROX DAMAGE DEALT TO THE HILICHURL
+        print(round(inDMG))
+        print(round(crit))
+      </pre>
+    </div>
+    <h4 class="GI_font" style="color: rgb(255, 255, 255)">There may be a +/- of 2 to the results</h4>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="text-center" style="padding-top: 50px;">
+    <div>
+        <h4 class="GI_font" style="color: rgb(255, 255, 255)">This was a very simple guide on how to build Mona.<br>Hopefully this short guide has inspired you to at least give Mona a shot!</h4>
+        <img src="Images/Character_Mona_Wish.png" alt="Mona Wish Image" style="padding-top: 50px;">
+    </div>
+    <div class="references font300" style="padding-top: 50;">
+      <p style="font-size: 25; color: rgb(32, 32, 32);">References Used</p>
+      <div style="font-size: 15; color: rgb(0, 0, 0);">
+        <ul>https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki</ul>
+        <ul>https://genshin.gg/</ul>
+        <ul>My own gameplay and stats</ul>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
 
@@ -378,6 +455,14 @@ body
 {
   width: 100vw;
   overflow-x: hidden;
+}
+
+div.sticky
+{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5;
+  padding: 5px;
 }
 
 .font100
@@ -419,7 +504,6 @@ body
     opacity: 75%;
     float: right;
     left: 70%;
-    top: 4100px;
 }
 
 .monaName
@@ -475,6 +559,20 @@ body
     padding-top: 35px;
     padding-bottom: 35px;
     background-color: #b84655;
+}
+
+.bg-6
+{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: #9846b8;
+}
+
+.bg-7
+{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: #a36ab9;
 }
 
 .button {
@@ -589,6 +687,21 @@ body
     font-weight: 100;
     color: rgb(255, 255, 255);
 }
+
+#rollTitle
+{
+    font-size: 75;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+}
+
+.code
+{
+  text-align: left;
+  background-color: white;
+}
+
+
 </style>
 
 
